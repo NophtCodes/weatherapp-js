@@ -1,5 +1,7 @@
 'use strict';
-
+if (window.location.href) {
+    window.location.href += '#/weather?lat=51.5073219&lon=-0.1276474';
+}
 import {
     fetchData,
     url
@@ -327,7 +329,7 @@ export const updateWeather = function(lat, lon ) {
             <span class="title-2">${parseInt(temp_max)}&deg;</span>
           </div>
           <p class="label-1">${date.getDate()} ${module.monthNames[date.getMonth()]}</p>
-          <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>;`
+          <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>`
           forecastSection.querySelector("[data-forecast-list]").appendChild(li);
            }
            loading.style.display = "none";
