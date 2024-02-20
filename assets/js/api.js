@@ -10,12 +10,12 @@ const api_key = "d0cea7e3e0ebdcb6e2ec250542f716a1";
 export const fetchData = function (URL, callback) {
     fetch(`${URL}&appid=${api_key}`)
         .then(res => res.json())
-        .then(data => callback(data))
+        .then(data => callback(data));
 }
 
 export const url = {
     currentWeather(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric&appid=d0cea7e3e0ebdcb6e2ec250542f716a1`
+        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric`;
     },
 
     forecast(lat, lon) {
@@ -23,7 +23,7 @@ export const url = {
     },
 
     airPollution(lat, lon) {
-        return `http://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`
+        return `http://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`;
     },
 
     reverseGeo(lat, lon) {
